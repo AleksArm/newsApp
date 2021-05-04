@@ -16,6 +16,7 @@ import kotlinx.coroutines.flow.distinctUntilChangedBy
 import kotlinx.coroutines.flow.filter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+//also we can add this page local support use RemoteMediator from Paging3
 class NewsFragment : BaseFragment<NewsFragmentBinding>() {
 
     private val newsViewModel: NewsViewModel by viewModel()
@@ -61,12 +62,13 @@ class NewsFragment : BaseFragment<NewsFragmentBinding>() {
         newsFeedAdapter.addLoadStateListener { loadState ->
             when (loadState.refresh) {
                 is LoadState.NotLoading -> {
-
+                    //hide loading or show no content view
                 }
                 is LoadState.Loading -> {
-
+                    //show loading
                 }
                 is LoadState.Error -> {
+                    //show errors
                 }
             }
 

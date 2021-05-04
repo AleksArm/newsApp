@@ -17,6 +17,7 @@ import kotlinx.coroutines.flow.filter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 //also we can add this page local support use RemoteMediator from Paging3
+//i forget implement swipe refresh,for that we need just call NewsFeedAdapter.refresh() method
 class NewsFragment : BaseFragment<NewsFragmentBinding>() {
 
     private val newsViewModel: NewsViewModel by viewModel()
